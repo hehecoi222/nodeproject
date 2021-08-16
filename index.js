@@ -1,26 +1,25 @@
-// In JS, there're 3 ways to declare variable
+// Work with string concatenation
 
-var x = 9;
-let y = 8;
-const z = 10;
+// String concatenation is the action of combining 2 strings (variables, strings, string literals)
+// Concatenation will make a new String, and can be done with "+" sign (caution of this usage, can be misunderstood with add a NUMBER)
 
-// var keyword:
+let greetings = "Hello";
+let place = "World";
+let exclaiminationMark = "!";
+let space = ' ';
+let comma = ",";
 
-// Function scoped, fuction-level scope (function {...})
-// Available anywhere in the function, from LINE 1 of the function EVEN when it's DECLARED in line 10
-// Can be changed in the scope 
+console.log(greetings + comma + space + place + exclaiminationMark);
 
-// let keyword:
+// Be careful with the "+" sign in add NUMBER or STRING CONCATENATION 
 
-// similar to var, but in block-level scope ({...})
-// Available inside the block, and from the line AFTER it's DECLARED
-//Can be changed in the scope
+let number_1 = 1;
+let number_2 = '1';
 
-// const keyword:
+// String concatenation 
+console.log(number_1 + number_2);
 
-//similar to let, but can NOT be changed in the scope
+// Number addition 
+console.log(number_1 + 1);
 
-
-// When to use :
-// const: in anywhere
-// let: in a loop block-level
+//It's always BEST to keep track of variable DATATYPE
