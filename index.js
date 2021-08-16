@@ -1,28 +1,26 @@
-//Code comment
-//Code that JS runtime ignore
+// In JS, there're 3 ways to declare variable
 
-// Single-line comment
+var x = 9;
+let y = 8;
+const z = 10;
 
-/*
+// var keyword:
 
-Multi-line comment
-Not affect anything outside the comment sign
+// Function scoped, fuction-level scope (function {...})
+// Available anywhere in the function, from LINE 1 of the function EVEN when it's DECLARED in line 10
+// Can be changed in the scope 
 
-*/
+// let keyword:
 
-// Shortcut to comment a line: Windows: Ctrl + / ; macOS: Command + /
+// similar to var, but in block-level scope ({...})
+// Available inside the block, and from the line AFTER it's DECLARED
+//Can be changed in the scope
 
-// Even in multi-line
-// comment work on shortcut
+// const keyword:
 
-//Keep comment works out by classify it and use it WHEN NEEDED
+//similar to let, but can NOT be changed in the scope
 
-//Ex: To explain something:
-// Here the code is use to reverseString
 
-//Ex: To markup, or TODO: list
-// TODO: Check the result of this code
-// M: This need to refer again in document
-
-//Ex: To block something execute
-// console.log("Hello World!")
+// When to use :
+// const: in anywhere
+// let: in a loop block-level
