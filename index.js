@@ -1,25 +1,20 @@
-// Work with string concatenation
+// Template Literal: Syntax makes strings easier to format and read
 
-// String concatenation is the action of combining 2 strings (variables, strings, string literals)
-// Concatenation will make a new String, and can be done with "+" sign (caution of this usage, can be misunderstood with add a NUMBER)
+// require backtick ` ` character to start with
+// Using placeholder ${} for variables or expressions
+// Respect line breaks (Don't need \n character) 
 
-let greetings = "Hello";
-let place = "World";
-let exclaiminationMark = "!";
-let space = ' ';
-let comma = ",";
+let str1 = "JavaScript";
+let str2 = "fun";
+let str3 = "\u4e16\u754c";
 
-console.log(greetings + comma + space + place + exclaiminationMark);
+console.log(`I'm writing codee in ${str1}`);
+console.log(`Formatting in ${str1} is ${str2}`);
+console.log(`Another way to test if Hello, ${str3}! works on there`);
 
-// Be careful with the "+" sign in add NUMBER or STRING CONCATENATION 
+// You can also put expression inside this ${...} , Eg:
 
-let number_1 = 1;
-let number_2 = '1';
+console.log(`1 + 1 is ${1+1}`);
 
-// String concatenation 
-console.log(number_1 + number_2);
-
-// Number addition 
-console.log(number_1 + 1);
-
-//It's always BEST to keep track of variable DATATYPE
+let bool1 = true;
+console.log(`The opposite of bool1 which is "true" is ${!bool1}`);
