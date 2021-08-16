@@ -1,2 +1,3 @@
 const place = "World"
-console.log('Hello %s 🌏',place)
+const greetings = "Hello"
+console.log(`${greetings}, ${place}`)
