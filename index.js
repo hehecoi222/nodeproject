@@ -1,37 +1,33 @@
-// Dates
-// Time is a construct: an Object
+// Boolean with if statement
 
-// One central object - Date: contain both date and time, and stored as number of milliseconds
+// Comparing in JavaScript
+// <, <= : for less than or equal or closer to the start of the alphabets
+// >, >= : for greater than or equal or further from the start of the alphabets
+// == : check for equality regardless of data type (JS automatically converts the type)
+// === : check for equal values and types (!BEST PRACTICE)
 
-// Create a date object:
+// != : check for non-equality regardless of data type
+// !== : check for non-equality on values and types (!BEST PRACTICE)
 
-// Get right now 
-let now = new Date();
-console.log(now);
+// If statement
 
-// Set a specific date and time:
-// Note that month start counting from 0, 1, 2, 3,..., 11
+if (true === false) {
+    // True side
+    console.log('OK!');
+} else if (true === '2') {
+    console.log('Not OK!');
+} else {
+    console.log("Unknown");
+};
 
-const randomDate = new Date(2021, 3, 14, 8, 4, 2);  // Year, Month, Date, Hour (24-hour clock), Minute, Second, ms
-console.log(randomDate);
+// Alternative for writing if statements
 
-// If hour, minute and second not specified, it'll be set to midnight 
+// Terse: no need { } if using single line
+if (9 === 9) console.log("9 = 9");
+else if (9 === 8) console.log("9 = 8");
+else console.log("Unknown");
 
-const win95Launch = new Date(1995, 7, 24);
-console.log(win95Launch);
+// Ternary (intstant): for quick check
 
-// Some methods to use with Date() Object
-
-now.setFullYear(2020);
-now.setMonth(3);  //Start counting from 0
-now.setDate(24);
-
-now.setHours(7);  //Offset UTC time
-now.setMinutes(24);
-
-console.log(now);
-
-// Getting value 
-console.log(now.getMonth());   // Get month
-console.log(now.getDay());  // Get Day in a week (Sunday = 0)
-console.log(now.getTime());  // miliseconds since 1/1/1970
+const message = (300 === 200) ? "OK" : "Not OK";             // If true, message = "OK"; else message = "Not OK"
+console.log(message)
