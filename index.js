@@ -14,7 +14,7 @@ console.log(parseInt(num1));
 console.log(parseInt('ABC'));
 console.log(parseInt('1+ABC')); //Special characters not numbers are ignored
 console.log(parseInt('0xF'));  // Hex Number
-console.log(parseInt(`${1+1}`)); //Put it in template literal
+console.log(parseInt(`${1 + 1}`)); //Put it in template literal
 
 const float1 = '1.50'
 
