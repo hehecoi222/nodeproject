@@ -1,22 +1,27 @@
-// Math in JavaScript 
+// Convert string to number 
 
-// Basic arithmatic 
+// Use parseInt() and parseFloat() 
+// Convert numerical string to numbers
+// Adding non-numerical characters can have unintended results
+// Float for floating point number
 
-let num1 = 100;
+// Number.toString(): convert numbers to nummerical strings
 
-console.log(num1 + 25);
-console.log(num1 - 100);
-console.log(num1 * 100);
-console.log(num1 / 1500);
+const num1 = '150';
 
-// Additional 
+console.log(parseInt('100'));
+console.log(parseInt(num1));
+console.log(parseInt('ABC'));
+console.log(parseInt('1+ABC')); //Special characters not numbers are ignored
+console.log(parseInt('0xF'));  // Hex Number
+console.log(parseInt(`${1+1}`)); //Put it in template literal
 
-console.log(num1 % 1500);  // Modulo
-console.log(`Increment ${++num1}`);  //Increment
-console.log(`Decrement ${--num1}`); //Decrement
+const float1 = '1.50'
 
-// The Math Object 
-// For mathematical operations, Eg:
+console.log(parseFloat(float1));
+console.log(parseInt(float1)); //Ignore the after-decimal part
 
-console.log(Math.PI);  //Pi number
-console.log(Math.sqrt(num1)) //Square root
+// Convert numbers to string
+console.log(num1.toString());
+console.log(float1.toString());
+console.log((100).toString());
