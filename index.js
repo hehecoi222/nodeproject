@@ -1,52 +1,22 @@
-// Data Type in JS 
+// Math in JavaScript 
 
-// JavaScript is weakly typed 
+// Basic arithmatic 
 
-// Number (float), String, Boolean, Date, Function, Array and Object
+let num1 = 100;
 
-// Special types: NaN, null, undefined
+console.log(num1 + 25);
+console.log(num1 - 100);
+console.log(num1 * 100);
+console.log(num1 / 1500);
 
-// Check the type of JS: 2 ways 
+// Additional 
 
-// typeof operator: Return a string of the data type 
-// instanceof operator: Return a boolean of if a value matches the data type 
+console.log(num1 % 1500);  // Modulo
+console.log(`Increment ${++num1}`);  //Increment
+console.log(`Decrement ${--num1}`); //Decrement
 
-let x = true
-console.log(typeof(x))
+// The Math Object 
+// For mathematical operations, Eg:
 
-// Type can change 
-x = 1 + ' hello'
-console.log(typeof(x))
-
-// Demo:
-
-console.log("--DEMO--")
-
-const people = ["This","Kind","Tell"];
-const one = new Number(1); //Use constructor, not literal
-const str = "Hello World";
-const b = true;
-const person ={
-    firstName: "This",
-    lastName:"Kind"
-};
-
-function sayHello(person){
-    console.log("Hello "+person.firstName);
-};
-
-console.log(typeof(people));
-console.log(typeof(one));  //Turn to Object since using constructor
-console.log(typeof(str));
-console.log(typeof(b));
-console.log(typeof(person));
-console.log(typeof(sayHello));
-
-console.log("--instanceof DEMO--");
-
-console.log(people instanceof Array);
-console.log(one instanceof Number);  //true
-console.log(str instanceof String);
-console.log(b instanceof Boolean);
-console.log(person instanceof Object);
-console.log(sayHello instanceof Function);
+console.log(Math.PI);  //Pi number
+console.log(Math.sqrt(num1)) //Square root
