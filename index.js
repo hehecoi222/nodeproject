@@ -1,20 +1,52 @@
-// Template Literal: Syntax makes strings easier to format and read
+// Data Type in JS 
 
-// require backtick ` ` character to start with
-// Using placeholder ${} for variables or expressions
-// Respect line breaks (Don't need \n character) 
+// JavaScript is weakly typed 
 
-let str1 = "JavaScript";
-let str2 = "fun";
-let str3 = "\u4e16\u754c";
+// Number (float), String, Boolean, Date, Function, Array and Object
 
-console.log(`I'm writing codee in ${str1}`);
-console.log(`Formatting in ${str1} is ${str2}`);
-console.log(`Another way to test if Hello, ${str3}! works on there`);
+// Special types: NaN, null, undefined
 
-// You can also put expression inside this ${...} , Eg:
+// Check the type of JS: 2 ways 
 
-console.log(`1 + 1 is ${1+1}`);
+// typeof operator: Return a string of the data type 
+// instanceof operator: Return a boolean of if a value matches the data type 
 
-let bool1 = true;
-console.log(`The opposite of bool1 which is "true" is ${!bool1}`);
+let x = true
+console.log(typeof(x))
+
+// Type can change 
+x = 1 + ' hello'
+console.log(typeof(x))
+
+// Demo:
+
+console.log("--DEMO--")
+
+const people = ["This","Kind","Tell"];
+const one = 1;
+const str = "Hello World";
+const b = true;
+const person ={
+    firstName: "This",
+    lastName:"Kind"
+};
+
+function sayHello(person){
+    console.log("Hello "+person.firstName);
+};
+
+console.log(typeof(people));
+console.log(typeof(one));
+console.log(typeof(str));
+console.log(typeof(b));
+console.log(typeof(person));
+console.log(typeof(sayHello));
+
+console.log("--instanceof DEMO--");
+
+console.log(people instanceof Array);
+console.log(one instanceof Number);
+console.log(str instanceof String);
+console.log(b instanceof Boolean);
+console.log(person instanceof Object);
+console.log(sayHello instanceof Function);
