@@ -23,7 +23,7 @@ console.log(typeof(x))
 console.log("--DEMO--")
 
 const people = ["This","Kind","Tell"];
-const one = 1;
+const one = new Number(1); //Use constructor, not literal
 const str = "Hello World";
 const b = true;
 const person ={
@@ -36,7 +36,7 @@ function sayHello(person){
 };
 
 console.log(typeof(people));
-console.log(typeof(one));
+console.log(typeof(one));  //Turn to Object since using constructor
 console.log(typeof(str));
 console.log(typeof(b));
 console.log(typeof(person));
@@ -45,7 +45,7 @@ console.log(typeof(sayHello));
 console.log("--instanceof DEMO--");
 
 console.log(people instanceof Array);
-console.log(one instanceof Number);
+console.log(one instanceof Number);  //true
 console.log(str instanceof String);
 console.log(b instanceof Boolean);
 console.log(person instanceof Object);
