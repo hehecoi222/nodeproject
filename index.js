@@ -1,27 +1,44 @@
-// Convert string to number 
+// Handling Errors
 
-// Use parseInt() and parseFloat() 
-// Convert numerical string to numbers
-// Adding non-numerical characters can have unintended results
-// Float for floating point number
+// Terminology:
+// Exception: Interuption in intended execution code
+// Error: Unintended interuption in executed of code, typically show up as exceptions
+// Syntax errors are a type of exception that occurs when incorrect syntax is used
+// Throwing an exception: Sending a message that something has gone wrong in the intended execution of code
+// Can be thrown by JS or by devs (with throw keyword)
 
-// Number.toString(): convert numbers to nummerical strings
+// Throwing exception
 
-const num1 = '150';
+try {
+    throw 'myException';
+}
+catch(err) {
+    console.log(err);
+};
+// Handling Errors in JS:
 
-console.log(parseInt('100'));
-console.log(parseInt(num1));
-console.log(parseInt('ABC'));
-console.log(parseInt('1+ABC')); //Special characters not numbers are ignored
-console.log(parseInt('0xF'));  // Hex Number
-console.log(parseInt(`${1 + 1}`)); //Put it in template literal
+// Uncaught Exceptions: Exception that have been throw when code has no guidance to handle the interuption
+// Users may see unhelpful obscure messages, or none exist
+// Catch these with try...catch...finally
 
-const float1 = '1.50'
+//Try: block of code that may throw an exception
+//Catch: block of code that will run if an exception is thrown
+//Finally: optionally control the flow of code, even when there's not an exception thrown
 
-console.log(parseFloat(float1));
-console.log(parseInt(float1)); //Ignore the after-decimal part
+// Demo:
 
-// Convert numbers to string
-console.log(num1.toString());
-console.log(float1.toString());
-console.log((100).toString());
+function logError(theException) {
+    console.log(theException);
+};
+
+try {
+    throw "An exception";
+}
+catch (ex) {
+    console.log("got an error");
+    logError(ex)
+}
+finally {
+    console.log("And here are the codes always running");
+    console.log("Even when there's an error")
+}
