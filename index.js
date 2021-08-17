@@ -1,44 +1,37 @@
-// Handling Errors
+// Dates
+// Time is a construct: an Object
 
-// Terminology:
-// Exception: Interuption in intended execution code
-// Error: Unintended interuption in executed of code, typically show up as exceptions
-// Syntax errors are a type of exception that occurs when incorrect syntax is used
-// Throwing an exception: Sending a message that something has gone wrong in the intended execution of code
-// Can be thrown by JS or by devs (with throw keyword)
+// One central object - Date: contain both date and time, and stored as number of milliseconds
 
-// Throwing exception
+// Create a date object:
 
-try {
-    throw 'myException';
-}
-catch(err) {
-    console.log(err);
-};
-// Handling Errors in JS:
+// Get right now 
+let now = new Date();
+console.log(now);
 
-// Uncaught Exceptions: Exception that have been throw when code has no guidance to handle the interuption
-// Users may see unhelpful obscure messages, or none exist
-// Catch these with try...catch...finally
+// Set a specific date and time:
+// Note that month start counting from 0, 1, 2, 3,..., 11
 
-//Try: block of code that may throw an exception
-//Catch: block of code that will run if an exception is thrown
-//Finally: optionally control the flow of code, even when there's not an exception thrown
+const randomDate = new Date(2021, 3, 14, 8, 4, 2);  // Year, Month, Date, Hour (24-hour clock), Minute, Second, ms
+console.log(randomDate);
 
-// Demo:
+// If hour, minute and second not specified, it'll be set to midnight 
 
-function logError(theException) {
-    console.log(theException);
-};
+const win95Launch = new Date(1995, 7, 24);
+console.log(win95Launch);
 
-try {
-    throw "An exception";
-}
-catch (ex) {
-    console.log("got an error");
-    logError(ex)
-}
-finally {
-    console.log("And here are the codes always running");
-    console.log("Even when there's an error")
-}
+// Some methods to use with Date() Object
+
+now.setFullYear(2020);
+now.setMonth(3);  //Start counting from 0
+now.setDate(24);
+
+now.setHours(7);  //Offset UTC time
+now.setMinutes(24);
+
+console.log(now);
+
+// Getting value 
+console.log(now.getMonth());   // Get month
+console.log(now.getDay());  // Get Day in a week (Sunday = 0)
+console.log(now.getTime());  // miliseconds since 1/1/1970
