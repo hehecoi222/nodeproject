@@ -1,33 +1,47 @@
-// Boolean with if statement
+// Boolean with switch statement (and other Boolean syntax)
 
-// Comparing in JavaScript
-// <, <= : for less than or equal or closer to the start of the alphabets
-// >, >= : for greater than or equal or further from the start of the alphabets
-// == : check for equality regardless of data type (JS automatically converts the type)
-// === : check for equal values and types (!BEST PRACTICE)
+// Implicit false values
+// String: empty string; Object: null; Number: 0
+// Eg:
 
-// != : check for non-equality regardless of data type
-// !== : check for non-equality on values and types (!BEST PRACTICE)
-
-// If statement
-
-if (true === false) {
-    // True side
-    console.log('OK!');
-} else if (true === '2') {
-    console.log('Not OK!');
-} else {
-    console.log("Unknown");
+if (0) {        // Use ! to reverse the result 
+    console.log("0 contain *NO* value")
 };
 
-// Alternative for writing if statements
+// String are case sensitive, and to fix that, convert lower, upper 
+// Or use localeCompare()
 
-// Terse: no need { } if using single line
-if (9 === 9) console.log("9 = 9");
-else if (9 === 8) console.log("9 = 8");
-else console.log("Unknown");
+if ("Hello" === "hello") {
+    console.log("Print out something");
+};
 
-// Ternary (intstant): for quick check
+// Fix #1:
+if (("Hello").toLocaleLowerCase() === "hello") {
+    console.log("Print out something to say " + "hello");
+};
 
-const message = (300 === 200) ? "OK" : "Not OK";             // If true, message = "OK"; else message = "Not OK"
-console.log(message)
+
+// Combinig comparisions
+// &&: and; ||: or
+
+if ((200 === 200) && (3000 === 3000)) { // And
+    console.log("OK!");
+};
+
+if (400 === (400 || 500)) {   // Or
+    console.log("400 or 500 error");
+};
+
+// More useful switch statement:
+
+switch (400) {
+    case 200:       // Always check equality
+        console.log("OK!");
+        break;      // MUST have break if not, the flow falltthrough the entire switch statement;
+    case 400 || 500:    // 400 or 500
+        console.log("Error");
+        break;
+    default:
+        console.log("Unknown");
+        break;
+};    //Just like Golang
